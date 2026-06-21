@@ -1,0 +1,28 @@
+guides:
+  - slug: lower-mid-market-origination-stack
+    title: A lower-mid-market origination stack
+    summary: Build a usable system of record before adding enrichment and AI-native search.
+    audience: Lower-mid-market private equity teams
+    last_reviewed_at: 2026-06-21
+    sections:
+      - { heading: Start with the system of record, body: Select the relationship and pipeline layer first. Enrichment and meeting capture should write into that operating record rather than create parallel silos. }
+      - { heading: Add breadth without replacing depth, body: Keep a verified market-data incumbent where it works, then add an AI-native search layer for the long tail of founder-owned targets. }
+      - { heading: Sequence adoption, body: Roll out one workflow at a time with an accountable owner, explicit data hand-offs and a thirty-day adoption check. }
+  - slug: meeting-memory-for-investment-teams
+    title: Meeting memory for investment teams
+    summary: Choose meeting capture by governance, adoption and downstream data flow, not transcript quality alone.
+    audience: Partners, principals and investment operations teams
+    last_reviewed_at: 2026-06-21
+    sections:
+      - { heading: Separate capture from operationalisation, body: A clean transcript is only useful when decisions, follow-ups and relationship context reach the system of record. }
+      - { heading: Weight partner adoption explicitly, body: Bot-free or low-friction capture can beat a more integrated product when senior adoption is the binding constraint. }
+      - { heading: Test governance early, body: Confirm consent, retention, data residency and export behaviour before standardising the tool across external meetings. }
+  - slug: assessing-ai-readiness
+    title: How to assess AI readiness in an investment tool
+    summary: Treat machine usability as an evidence set across APIs, MCP, webhooks, exports and authentication.
+    audience: AI, data and operating leads
+    last_reviewed_at: 2026-06-21
+    sections:
+      - { heading: Prefer interfaces over features, body: A native copilot matters less than stable objects and a supported path for your own agents to read and write data. }
+      - { heading: Verify the access tier, body: Public documentation can hide enterprise-only access. Check commercial tier, scopes, rate limits and write operations. }
+      - { heading: Preserve an exit path, body: Structured exports and reliable identifiers protect data ownership and reduce the cost of changing workflow components later. }

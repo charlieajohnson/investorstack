@@ -1,0 +1,8 @@
+categories:
+  - { id: meeting_memory, slug: meeting-memory, name: Meeting Memory, description: Capture, summarise and operationalise meetings., workflow_stages: [meet, manage], priority: P0 }
+  - { id: crm_relationship_intelligence, slug: crm-relationship-intelligence, name: CRM / Relationship Intelligence, description: Track relationships, pipeline and deal context., workflow_stages: [manage, outreach], priority: P0 }
+  - { id: private_market_data, slug: private-market-data, name: Private Market Data, description: Discover companies, ownership and market context., workflow_stages: [source, diligence], priority: P0 }
+  - { id: contact_data, slug: contact-data, name: Contact Data, description: Find and validate professional contact information., workflow_stages: [enrich, outreach], priority: P0 }
+  - { id: gtm_enrichment, slug: gtm-enrichment, name: GTM / Enrichment, description: Build lists, enrich records and stitch intent signals., workflow_stages: [enrich, score, outreach], priority: P0 }
+  - { id: portfolio_monitoring_reporting, slug: portfolio-monitoring-reporting, name: Portfolio Monitoring / Finance Reporting, description: Track portfolio KPIs, valuation, planning and reporting., workflow_stages: [monitor, report], priority: P0 }
+  - { id: ai_operating_layer, slug: ai-operating-layer, name: AI Operating Layer, description: Research, analyse, write and automate across the investment loop., workflow_stages: [score, diligence, report], priority: P0 }

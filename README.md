@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# InvestorStack
 
-## Getting Started
+InvestorStack is a workflow-oriented software directory and stack-recommendation engine for investment firms. It maps 35 tools across seven categories, exposes AI-readiness evidence, and produces deterministic profile recommendations and current-stack audits.
 
-First, run the development server:
+## Run locally
 
 ```bash
+npm install
+cp .env.example .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Seed mode requires no external services. Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Verify
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run check
+```
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+`check` validates all YAML, enforces external-copy rules, lints, type-checks and runs the test suite.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Architecture
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Next.js 16 App Router and React Server Components for directory routes.
+- Small client islands for theme, compare, stack builder, audit and lead forms.
+- YAML data validated by Zod behind `ToolRepository`.
+- Pure scoring, profile-ranking and stack-audit functions.
+- Supabase schema and repository adapter ready but optional at runtime.
+- Resend delivery ready but optional; missing credentials produce a validated synthetic path.
 
-## Deploy on Vercel
+See [backend.md](docs/backend.md), [architecture decisions](docs/decisions.md) and the [implementation plan](docs/superpowers/plans/2026-06-21-initial-build.md).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Data trust
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Only Meeting Memory carries provisional numeric scores. Every other tool is deliberately unscored and shows qualitative fit plus API, MCP, webhook, export and authentication signals. Paid activity never changes rank or verdict.
+
+## Environment
+
+| Variable | Required | Purpose |
+|---|---:|---|
+| `NEXT_PUBLIC_SITE_URL` | Production | Canonical metadata and sitemap URL |
+| `USE_SUPABASE` | No | Select hosted data instead of validated YAML |
+| `NEXT_PUBLIC_SUPABASE_URL` | Supabase only | Hosted project URL |
+| `SUPABASE_SECRET_KEY` | Supabase only | Server-only repository and seed access |
+| `RESEND_API_KEY` | Email only | Lead notification delivery |
+| `RESEND_FROM_EMAIL` | Email only | Verified sender |
+| `LEAD_NOTIFICATION_EMAIL` | Email only | Internal destination |
+
+## Deployment
+
+The repository is Vercel-ready. A credential-free production deployment uses seed mode; connect Supabase and Resend later without changing page code.

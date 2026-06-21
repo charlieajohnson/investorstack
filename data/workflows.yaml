@@ -1,0 +1,10 @@
+workflows:
+  - { id: source, label: Source, description: Identify relevant companies, markets and opportunities., category_ids: [private_market_data, ai_operating_layer] }
+  - { id: enrich, label: Enrich, description: Add company, contact, ownership and signal data., category_ids: [contact_data, gtm_enrichment] }
+  - { id: score, label: Score, description: Classify and prioritise opportunities., category_ids: [gtm_enrichment, ai_operating_layer] }
+  - { id: outreach, label: Outreach, description: Contact founders, executives and intermediaries., category_ids: [contact_data, gtm_enrichment, crm_relationship_intelligence] }
+  - { id: meet, label: Meet, description: Capture founder, expert and internal meetings., category_ids: [meeting_memory] }
+  - { id: manage, label: Manage, description: Maintain relationships, pipeline and deal context., category_ids: [crm_relationship_intelligence, meeting_memory] }
+  - { id: diligence, label: Diligence, description: Analyse materials and prepare investment work., category_ids: [private_market_data, ai_operating_layer] }
+  - { id: monitor, label: Monitor, description: Track portfolio and watchlist companies., category_ids: [portfolio_monitoring_reporting] }
+  - { id: report, label: Report, description: Produce board, LP, IC and management reporting., category_ids: [portfolio_monitoring_reporting, ai_operating_layer] }

@@ -1,0 +1,1 @@
+-- Seed data is loaded through `npm run seed:supabase` after linking a project.
