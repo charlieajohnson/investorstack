@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import type { Category, FirmProfile, Tool } from "@/lib/domain/schemas";
 import { recommendTools, type RecommendationResult } from "@/lib/domain/recommendations";
 import { auditStack, type StackAudit } from "@/lib/domain/stack-audit";
@@ -21,6 +21,11 @@ export function StackBuilder({ categories, tools }: { categories: Category[]; to
   const [mapping, setMapping] = useState<Record<string, string>>({});
   const [recommendation, setRecommendation] = useState<RecommendationResult>();
   const [audit, setAudit] = useState<StackAudit>();
+  const mappedRows = useMemo(() => categories.map((category) => {
+    const selected = tools.find((tool) => tool.slug === mapping[category.id]);
+    return { category, selected };
+  }), [categories, mapping, tools]);
+  const mappedCount = mappedRows.filter((row) => row.selected).length;
 
   function updateProfile<K extends keyof FirmProfile>(key: K, value: FirmProfile[K]) {
     setProfile((current) => ({ ...current, [key]: value }));
@@ -36,6 +41,21 @@ export function StackBuilder({ categories, tools }: { categories: Category[]; to
       <div className="surface builder-shell" style={{ borderTopLeftRadius: 0 }}>
         {mode === "profile" ? (
           <form onSubmit={(event) => { event.preventDefault(); setRecommendation(recommendTools(profile, categories, tools)); }}>
+            <div className="builder-intro">
+              <div>
+                <span className="eyebrow">Build from context</span>
+                <h2 className="display">Start with the firm profile.</h2>
+                <p className="lede">Use structured inputs to produce a provisional operating-stack sequence with rationale and implementation order.</p>
+              </div>
+              <div className="stack-map-preview">
+                <span className="meta">Default profile</span>
+                <ul>
+                  <li><span>Firm type</span><strong>Lower-mid-market PE</strong><span className="stack-map-state">assumed</span></li>
+                  <li><span>Team size</span><strong>6 to 20</strong><span className="stack-map-state">lean</span></li>
+                  <li><span>Owner</span><strong>Ops lead</strong><span className="stack-map-state">implementation</span></li>
+                </ul>
+              </div>
+            </div>
             <div className="form-grid">
               <div className="field"><label htmlFor="firm-type">Firm type</label><select className="select" id="firm-type" value={profile.firm_type} onChange={(event) => updateProfile("firm_type", event.target.value as FirmProfile["firm_type"])}><option value="lower_mid_market_pe">Lower-mid-market PE</option><option value="growth_equity">Growth equity</option><option value="venture_capital">Venture capital</option><option value="search_fund">Search fund</option><option value="family_office">Family office</option><option value="portfolio_company">Portfolio company</option><option value="portfolio_finance_team">Portfolio finance team</option></select></div>
               <div className="field"><label htmlFor="team-size">Team size</label><select className="select" id="team-size" value={profile.team_size} onChange={(event) => updateProfile("team_size", event.target.value as FirmProfile["team_size"])}><option value="solo">Solo</option><option value="small_1_5">1 to 5</option><option value="lean_6_20">6 to 20</option><option value="mid_21_75">21 to 75</option><option value="large_75_plus">75 plus</option></select></div>
@@ -48,7 +68,25 @@ export function StackBuilder({ categories, tools }: { categories: Category[]; to
           </form>
         ) : (
           <form onSubmit={(event) => { event.preventDefault(); setAudit(auditStack(profile, mapping, categories, tools)); }}>
-            <div className="rule-title"><h2>Map your current stack</h2><span className="meta">Partial maps are fine</span></div>
+            <div className="builder-intro">
+              <div>
+                <span className="eyebrow">Stack health cockpit</span>
+                <h2 className="display">Map what you use. See what works.</h2>
+                <p className="lede">Partial maps are fine. Each selected tool becomes part of the stack health view before a provisional recommendation is produced.</p>
+              </div>
+              <div className="stack-map-preview">
+                <span className="meta">{mappedCount} of {categories.length} categories mapped</span>
+                <ul>
+                  {mappedRows.slice(0, 6).map(({ category, selected }) => (
+                    <li key={category.id}>
+                      <span>{category.name}</span>
+                      <strong>{selected?.name ?? "Not mapped"}</strong>
+                      <span className="stack-map-state">{selected ? selected.implementation_burden.replaceAll("_", " ") : "gap"}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
             <div className="form-grid">{categories.map((category) => <div className="field" key={category.id}><label htmlFor={`mapping-${category.id}`}>{category.name}</label><select className="select" id={`mapping-${category.id}`} value={mapping[category.id] ?? ""} onChange={(event) => { setMapping((current) => ({ ...current, [category.id]: event.target.value })); setAudit(undefined); }}><option value="">Not mapped</option>{tools.filter((tool) => tool.category_id === category.id).map((tool) => <option key={tool.slug} value={tool.slug}>{tool.name}</option>)}</select></div>)}</div>
             <div className="builder-actions"><p className="muted">Recommendations respect the incumbent and default to augment, not replace.</p><button className="button" type="submit">Audit this stack</button></div>
           </form>

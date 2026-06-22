@@ -10,6 +10,7 @@ export function CompareExplorer({ tools, initialSlugs }: { tools: Tool[]; initia
   const validInitial = initialSlugs.filter((slug) => tools.some((tool) => tool.slug === slug)).slice(0, 4);
   const [selected, setSelected] = useState(validInitial.length >= 2 ? validInitial : ["fathom", "granola"]);
   const selectedTools = useMemo(() => selected.flatMap((slug) => tools.find((tool) => tool.slug === slug) ? [tools.find((tool) => tool.slug === slug)!] : []), [selected, tools]);
+  const recommendation = useMemo(() => buildComparisonRecommendation(selectedTools), [selectedTools]);
 
   function add(slug: string) {
     if (!slug || selected.includes(slug) || selected.length >= 4) return;
@@ -37,6 +38,10 @@ export function CompareExplorer({ tools, initialSlugs }: { tools: Tool[]; initia
         </div>
         <p className="meta" style={{ marginBottom: 0 }}>Compare 2 to 4 tools · URL state is shareable</p>
       </div>
+      <div className="surface" style={{ padding: 22, marginBottom: 24, borderColor: "color-mix(in srgb, var(--color-teal) 34%, var(--color-border))" }}>
+        <span className="eyebrow">Recommendation</span>
+        <p className="lede" style={{ margin: "10px 0 0", maxWidth: 900 }}>{recommendation}</p>
+      </div>
       <div className="table-wrap">
         <table className="data-table" style={{ minWidth: Math.max(760, selectedTools.length * 250) }}>
           <thead><tr><th scope="col">Field</th>{selectedTools.map((tool) => <th key={tool.slug} scope="col"><span>{tool.name}</span>{selected.length > 2 ? <button type="button" onClick={() => remove(tool.slug)} aria-label={`Remove ${tool.name}`} style={{ marginLeft: 10, color: "var(--color-negative)" }}>×</button> : null}</th>)}</tr></thead>
@@ -56,4 +61,21 @@ export function CompareExplorer({ tools, initialSlugs }: { tools: Tool[]; initia
       </div>
     </div>
   );
+}
+
+function buildComparisonRecommendation(selectedTools: Tool[]) {
+  const scored = selectedTools.filter((tool) => tool.scores);
+  if (scored.length >= 2) {
+    const leader = scored.toSorted((a, b) => calculateOverallScore(b.scores!) - calculateOverallScore(a.scores!))[0];
+    if (leader) {
+      return `For a lower-mid-market investment team, ${leader.name} is the strongest currently scored option in this comparison. Treat the view as provisional and check implementation fit, integrations and evidence before making a buying decision.`;
+    }
+  }
+
+  const apiReady = selectedTools.find((tool) => tool.ai_readiness_signal.public_api === "documented" || tool.ai_readiness_signal.mcp === "hosted");
+  if (apiReady) {
+    return `${apiReady.name} shows the clearest machine-readiness signal in this comparison. Use the table to check whether that advantage matters more than workflow fit, time-to-value and governance for your firm.`;
+  }
+
+  return "No ranked recommendation is published for this mix yet. Use qualitative fit, implementation burden and integration signals as the decision scaffold until the evidence pass is complete.";
 }

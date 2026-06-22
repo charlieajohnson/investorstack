@@ -17,7 +17,10 @@ export function TopNav() {
         <nav className="nav-links" aria-label="Primary navigation">
           {links.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}
         </nav>
-        <ThemeToggle />
+        <div className="nav-cta">
+          <Link className="nav-audit-link" href="/stack-builder">Audit stack</Link>
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   );

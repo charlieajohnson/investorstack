@@ -1,0 +1,70 @@
+<svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="900" fill="#FAF7F0"/>
+  <path d="M0 692C173 650 312 692 472 656C632 620 712 542 879 571C1046 600 1139 684 1440 614V900H0V692Z" fill="#F4F0E8"/>
+  <path d="M779 144C893 104 1064 93 1183 145C1302 197 1354 303 1372 408C1390 513 1338 661 1201 695C1064 729 941 673 858 611C775 549 704 453 708 342C712 231 665 184 779 144Z" fill="#E8DDCD" opacity=".45"/>
+  <path d="M770 382C870 318 982 310 1096 342C1210 374 1289 443 1385 432" stroke="#D8CCB9" stroke-width="1.2" opacity=".55"/>
+  <path d="M729 430C834 364 975 352 1109 392C1243 432 1325 505 1431 486" stroke="#D8CCB9" stroke-width="1.2" opacity=".48"/>
+  <path d="M720 486C836 432 964 419 1117 461C1270 503 1324 566 1438 548" stroke="#D8CCB9" stroke-width="1.2" opacity=".42"/>
+  <rect x="58" y="34" width="1324" height="72" rx="36" fill="#FFFDF8" fill-opacity=".82" stroke="#E8DDCD"/>
+  <text x="96" y="80" fill="#111713" font-family="Georgia, serif" font-size="26" font-weight="600" letter-spacing="-1.2">InvestorStack</text>
+  <text x="628" y="77" fill="#37413A" font-family="Inter, Arial, sans-serif" font-size="14">Categories</text>
+  <text x="735" y="77" fill="#37413A" font-family="Inter, Arial, sans-serif" font-size="14">Stack Builder</text>
+  <text x="875" y="77" fill="#37413A" font-family="Inter, Arial, sans-serif" font-size="14">Compare</text>
+  <text x="976" y="77" fill="#37413A" font-family="Inter, Arial, sans-serif" font-size="14">Guides</text>
+  <text x="1064" y="77" fill="#37413A" font-family="Inter, Arial, sans-serif" font-size="14">Methodology</text>
+  <rect x="1212" y="51" width="128" height="38" rx="19" fill="#0B3D31"/>
+  <text x="1242" y="75" fill="#FFFDF8" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600">Audit stack</text>
+  <text x="96" y="236" fill="#B57922" font-family="Menlo, monospace" font-size="12" font-weight="700" letter-spacing="1.6">THE INVESTMENT OPERATING STACK</text>
+  <text x="92" y="312" fill="#111713" font-family="Georgia, serif" font-size="64" font-weight="500" letter-spacing="-3.7">Find the right</text>
+  <text x="92" y="376" fill="#111713" font-family="Georgia, serif" font-size="64" font-weight="500" letter-spacing="-3.7">operating stack</text>
+  <text x="92" y="440" fill="#111713" font-family="Georgia, serif" font-size="64" font-weight="500" letter-spacing="-3.7">for your</text>
+  <text x="92" y="504" fill="#111713" font-family="Georgia, serif" font-size="64" font-weight="500" letter-spacing="-3.7">investment firm.</text>
+  <text x="98" y="562" fill="#37413A" font-family="Inter, Arial, sans-serif" font-size="20">Map your current tools, compare vendors, and identify the</text>
+  <text x="98" y="594" fill="#37413A" font-family="Inter, Arial, sans-serif" font-size="20">systems that improve sourcing, diligence, portfolio monitoring,</text>
+  <text x="98" y="626" fill="#37413A" font-family="Inter, Arial, sans-serif" font-size="20">reporting, and AI-enabled workflows.</text>
+  <rect x="98" y="668" width="142" height="48" rx="24" fill="#0B3D31"/>
+  <text x="127" y="698" fill="#FFFDF8" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="650">Audit your stack</text>
+  <rect x="255" y="668" width="162" height="48" rx="24" stroke="#0B3D31"/>
+  <text x="286" y="698" fill="#0B3D31" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="650">Browse categories</text>
+  <text x="98" y="752" fill="#76766E" font-family="Menlo, monospace" font-size="12" letter-spacing=".5">Map → Score → Recommend → Evidence → Action</text>
+  <rect x="713" y="176" width="617" height="575" rx="32" fill="#EEF1DF" stroke="#D8CCB9"/>
+  <clipPath id="scene"><rect x="713" y="176" width="617" height="575" rx="32"/></clipPath>
+  <g clip-path="url(#scene)">
+    <rect x="713" y="176" width="617" height="575" fill="#F4F0E8"/>
+    <path d="M675 550C798 446 911 422 1074 450C1237 478 1306 552 1413 516V751H675V550Z" fill="#BFE9E6" opacity=".72"/>
+    <path d="M698 577C838 520 955 511 1116 544C1277 577 1348 617 1421 602" stroke="#3B8A8D" stroke-opacity=".32" stroke-width="2"/>
+    <path d="M696 629C842 579 979 568 1117 602C1255 636 1350 673 1420 653" stroke="#164F3A" stroke-opacity=".24" stroke-width="2"/>
+    <circle cx="1156" cy="255" r="129" fill="#FFFDF8" fill-opacity=".35"/>
+    <rect x="768" y="237" width="420" height="346" rx="22" fill="#FFFDF8" fill-opacity=".92" stroke="#D8CCB9"/>
+    <rect x="788" y="260" width="88" height="300" rx="16" fill="#F1EADF" stroke="#E8DDCD"/>
+    <text x="808" y="294" fill="#0B3D31" font-family="Menlo, monospace" font-size="10" font-weight="700">STACK</text>
+    <text x="808" y="331" fill="#37413A" font-family="Inter, Arial, sans-serif" font-size="12">Stack Map</text>
+    <text x="808" y="363" fill="#164F3A" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700">Audit</text>
+    <text x="808" y="395" fill="#37413A" font-family="Inter, Arial, sans-serif" font-size="12">Compare</text>
+    <text x="808" y="427" fill="#37413A" font-family="Inter, Arial, sans-serif" font-size="12">Methodology</text>
+    <text x="904" y="291" fill="#111713" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">Current operating stack</text>
+    <g font-family="Inter, Arial, sans-serif" font-size="12" fill="#37413A">
+      <rect x="904" y="315" width="244" height="28" rx="14" fill="#F4F0E8"/><text x="920" y="334">CRM</text><text x="1072" y="334" font-weight="700">Salesforce</text>
+      <rect x="904" y="352" width="244" height="28" rx="14" fill="#F4F0E8"/><text x="920" y="371">Data</text><text x="1078" y="371" font-weight="700">PitchBook</text>
+      <rect x="904" y="389" width="244" height="28" rx="14" fill="#F4F0E8"/><text x="920" y="408">Modelling</text><text x="1098" y="408" font-weight="700">Excel</text>
+      <rect x="904" y="426" width="244" height="28" rx="14" fill="#F4F0E8"/><text x="920" y="445">Docs</text><text x="1067" y="445" font-weight="700">Google Drive</text>
+      <rect x="904" y="463" width="244" height="28" rx="14" fill="#F4F0E8"/><text x="920" y="482">Workflow</text><text x="1093" y="482" font-weight="700">Asana</text>
+    </g>
+    <rect x="1032" y="528" width="225" height="100" rx="20" fill="#FFFDF8" stroke="#D8CCB9"/>
+    <text x="1054" y="557" fill="#B57922" font-family="Menlo, monospace" font-size="10" font-weight="700">RECOMMENDATION</text>
+    <text x="1054" y="584" fill="#111713" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">Add reporting automation</text>
+    <text x="1054" y="607" fill="#76766E" font-family="Inter, Arial, sans-serif" font-size="11">Manual reporting drag detected</text>
+    <rect x="688" y="481" width="202" height="155" rx="20" fill="#FFFDF8" stroke="#D8CCB9"/>
+    <text x="711" y="511" fill="#B57922" font-family="Menlo, monospace" font-size="10" font-weight="700">STACK HEALTH</text>
+    <text x="711" y="540" fill="#37413A" font-family="Inter, Arial, sans-serif" font-size="12">Coverage</text><text x="834" y="540" fill="#164F3A" font-family="Menlo, monospace" font-size="13" font-weight="700">72</text>
+    <text x="711" y="570" fill="#37413A" font-family="Inter, Arial, sans-serif" font-size="12">AI readiness</text><text x="834" y="570" fill="#3B8A8D" font-family="Menlo, monospace" font-size="13" font-weight="700">41</text>
+    <text x="711" y="600" fill="#37413A" font-family="Inter, Arial, sans-serif" font-size="12">Integration</text><text x="834" y="600" fill="#B57922" font-family="Menlo, monospace" font-size="13" font-weight="700">38</text>
+    <rect x="1018" y="193" width="180" height="38" rx="19" fill="#BFE9E6" stroke="#3B8A8D" stroke-opacity=".32"/>
+    <text x="1043" y="217" fill="#0B3D31" font-family="Menlo, monospace" font-size="11" font-weight="700">Evidence attached</text>
+  </g>
+  <rect x="96" y="803" width="1248" height="1" fill="#E8DDCD"/>
+  <text x="98" y="843" fill="#37413A" font-family="Inter, Arial, sans-serif" font-size="15">Browse tools</text>
+  <text x="362" y="843" fill="#37413A" font-family="Inter, Arial, sans-serif" font-size="15">Audit current stack</text>
+  <text x="681" y="843" fill="#37413A" font-family="Inter, Arial, sans-serif" font-size="15">Compare vendors</text>
+  <text x="1002" y="843" fill="#37413A" font-family="Inter, Arial, sans-serif" font-size="15">Read methodology</text>
+</svg>
