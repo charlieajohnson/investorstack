@@ -109,8 +109,9 @@ button, select { cursor: pointer; }
   mask-image: radial-gradient(closest-side, #000 50%, transparent);
   opacity: 0.65;
 }
-.hero-grid { display: grid; grid-template-columns: minmax(0, 0.92fr) minmax(520px, 1.08fr); gap: clamp(48px, 7vw, 112px); align-items: center; min-height: calc(100vh - 68px); padding-block: clamp(72px, 9vw, 118px); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 0.98fr) minmax(470px, 1.02fr); gap: clamp(34px, 5vw, 78px); align-items: center; min-height: calc(100vh - 68px); padding-block: clamp(58px, 7vw, 92px); }
 .hero-copy { max-width: 760px; }
+.home-hero .page-title { max-width: 650px; font-size: clamp(3.15rem, 5vw, 5rem); }
 .hero-copy .lede { margin-top: 24px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
 .trust-line { margin-top: 26px; color: var(--color-ink-muted); font-family: "Geist Mono", monospace; font-size: 0.78rem; letter-spacing: 0.04em; }
@@ -132,16 +133,17 @@ button, select { cursor: pointer; }
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 0;
   background:
-    linear-gradient(180deg, rgba(250, 247, 240, 0.26), rgba(11, 61, 49, 0.16)),
-    repeating-linear-gradient(168deg, rgba(255, 253, 248, 0.18) 0 1px, transparent 1px 46px);
+    linear-gradient(180deg, rgba(250, 247, 240, 0.12), rgba(11, 61, 49, 0.08)),
+    repeating-linear-gradient(168deg, rgba(255, 253, 248, 0.13) 0 1px, transparent 1px 46px);
 }
 .hero { position: relative; min-height: 500px; overflow: hidden; border-bottom: 1px solid var(--color-border); display: flex; align-items: center; }
 .hero-image { object-fit: cover; object-position: center right; z-index: 0; }
 .hero::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, var(--color-canvas) 0%, color-mix(in srgb, var(--color-canvas) 92%, transparent) 42%, transparent 82%); pointer-events: none; }
 .hero-content { position: relative; z-index: 2; padding-block: 86px; }
 
-.audit-vignette { position: absolute; inset: 0; color: var(--color-ink); }
+.audit-vignette { position: absolute; inset: 0; z-index: 1; color: var(--color-ink); }
 .audit-vignette-shell {
   position: absolute;
   left: 9%;
@@ -153,7 +155,7 @@ button, select { cursor: pointer; }
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--color-border-strong) 80%, transparent);
   border-radius: 24px;
-  background: color-mix(in srgb, var(--color-surface) 92%, transparent);
+  background: color-mix(in srgb, var(--color-surface) 97%, transparent);
   box-shadow: var(--shadow-lift);
   backdrop-filter: blur(10px);
   animation: vignette-rise 1100ms var(--ease) both;
@@ -189,7 +191,7 @@ button, select { cursor: pointer; }
   position: absolute;
   border: 1px solid color-mix(in srgb, var(--color-border-strong) 82%, transparent);
   border-radius: 20px;
-  background: color-mix(in srgb, var(--color-surface) 93%, transparent);
+  background: color-mix(in srgb, var(--color-surface) 98%, transparent);
   box-shadow: var(--shadow-soft);
   backdrop-filter: blur(10px);
 }
