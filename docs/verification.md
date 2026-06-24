@@ -1,46 +1,36 @@
 # Verification record
 
-## Automated gates
+## 2026-06-24 Humanist Compute Atelier rebuild
 
-- `npm run check`: data validation, copy lint, ESLint, TypeScript and 23 Vitest tests passed.
+Status: local verification passed against the production build.
+
+### Passed
+
+- `npm run check`: data validation, copy lint, ESLint, TypeScript and 24 Vitest tests passed.
 - `npm run build`: 59 routes generated successfully with Next.js 16.2.9.
-- `npm audit --audit-level=high`: no high-severity vulnerabilities. Two moderate upstream PostCSS findings remain; the suggested forced fix would downgrade Next.js to 9.
-- Lighthouse home: performance 95, accessibility 100, FCP 0.8s, LCP 2.9s, TBT 20ms and CLS 0.
-- Lighthouse tool page: performance 95, accessibility 100, FCP 0.8s, LCP 2.9s, TBT 60ms and CLS 0.
+- `npm audit --audit-level=high`: passed. Two moderate upstream Next/PostCSS findings remain; the forced fix would downgrade Next.js.
+- Targeted whitespace and conflict-marker scans passed for changed source, tests, docs and SVG assets.
+- Production browser QA passed against `next start` on `127.0.0.1:3012`: no console/page errors and no horizontal overflow at 1440 by 1100 or 390 by 844.
+- Browser flow verified firm name or URL input, local concept-only preview update, current-tool bricks, gap slips, recommendation sequence, evidence slips, Stack health output and mobile Compare cards.
 
-The retained Lighthouse reports are `lighthouse-home-final6.json` and `lighthouse-tool-final.json`.
+### Evidence retained
 
-## Browser flows
+- Source concept: `docs/concepts/humanist-compute-atelier-stack-builder-concept.png`.
+- Archived previous aesthetic: `docs/archive/dark-investorstack-aesthetic/`.
+- New favicon and graphic assets: `public/favicon.svg`, `public/favicon-16x16.png`, `public/favicon-32x32.png`, `public/apple-touch-icon.png`, `public/graphics/stack-builder-bricks.svg`.
+- Production screenshots:
+  - `docs/verification/humanist-compute-atelier-home-desktop.png`
+  - `docs/verification/humanist-compute-atelier-home-mobile.png`
+  - `docs/verification/humanist-compute-atelier-builder-desktop.png`
+  - `docs/verification/humanist-compute-atelier-builder-result.png`
+  - `docs/verification/humanist-compute-atelier-compare-mobile.png`
 
-Verified in the in-app browser against the production build at desktop and 390 by 844 mobile dimensions:
+### Scope verified by source inspection
 
-1. Directory navigation from home to category and tool detail.
-2. URL-backed comparison with two tools.
-3. Profile-based stack recommendation.
-4. Current-stack audit with incumbent-aware add-alongside guidance.
-5. Synthetic lead submission, including validation and redacted server logging.
-6. Dark-mode persistence and no-flash initialisation.
-7. No horizontal overflow or console errors on the final mobile pass.
-
-## Visual fidelity
-
-Accepted source concepts:
-
-- `docs/concepts/home-concept.png`
-- `docs/concepts/stack-builder-concept.png`
-- `docs/concepts/institutional-pastoral-home-concept.png`
-
-Rendered evidence:
-
-- `docs/verification/home-desktop-final.png`
-- `docs/verification/home-mobile-final.png`
-- `docs/verification/granola-desktop.png`
-- `docs/verification/stack-audit-desktop-final.png`
-- `docs/verification/institutional-pastoral-home-production-desktop.png`
-- `docs/verification/institutional-pastoral-home-production-mobile.png`
-- `docs/verification/institutional-pastoral-stack-audit-production.png`
-
-The final home rendering preserves the concept's editorial three-line headline, warm paper palette, restrained serif and sans typography, orchard image band, rule-led navigation, workflow sequence and compact category preview. Mobile reflows the sequence and trims the hero band without changing hierarchy. Product copy follows the written specification rather than generated concept copy. The builder uses a full-width form before the health table instead of the concept's split form-and-summary arrangement; this keeps the 1320px audit table legible and avoids a compressed input column.
+- The theme toggle, `.dark` tokens and local-storage theme initialisation were removed from live source.
+- Stack Builder is now a six-step guided ledger with concept-only firm name or URL input, local stack preview updates, current-tool bricks, gap slips, recommendation sequence and evidence slips.
+- Category tables and Compare now include mobile card renderings.
+- Humanist Compute Atelier tokens are the only live visual system.
 
 ## 2026-06-22 aesthetic overhaul
 

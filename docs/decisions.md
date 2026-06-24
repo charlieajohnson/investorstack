@@ -27,3 +27,10 @@
 - **Why:** Lower latency and cost, reproducible outputs, and no rationale drift from editorial evidence.
 - **Rejected:** Free-text LLM recommendations; static hand-authored result pages.
 - **Failure modes:** Coarse heuristics. The UI labels the output provisional and preserves the evidence fields needed for later calibration.
+
+## 2026-06-24: Make Humanist Compute Atelier the single live visual system
+
+- **Decision:** Replace the optional light/dark institutional pastoral system with one archival-paper Humanist Compute Atelier interface, and archive the previous aesthetic under `docs/archive/dark-investorstack-aesthetic/`.
+- **Why:** InvestorStack should read as an operating-stack atlas and guided diagnosis surface, not a generic directory with theme variants.
+- **Rejected:** Keep the theme toggle as a user preference; layer the atelier treatment on top of the old dark-mode infrastructure.
+- **Failure modes:** The aesthetic could drift into decoration or hide product clarity. The live surface keeps deterministic stack logic, explicit provisional labels and evidence slips visible.

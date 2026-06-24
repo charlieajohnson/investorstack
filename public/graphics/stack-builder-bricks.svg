@@ -1,0 +1,32 @@
+<svg width="960" height="560" viewBox="0 0 960 560" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="InvestorStack stack-builder bricks">
+  <rect width="960" height="560" rx="28" fill="#f6f2e8"/>
+  <path d="M80 86h800M80 474h800" stroke="#d8cdbd"/>
+  <path d="M168 128v304" stroke="#bfb2a0" stroke-dasharray="4 10"/>
+  <circle cx="168" cy="158" r="5" fill="#7fa7a4"/>
+  <circle cx="168" cy="232" r="5" fill="#7fa7a4"/>
+  <circle cx="168" cy="306" r="5" fill="#a94d43"/>
+  <circle cx="168" cy="380" r="5" fill="#b89452"/>
+  <g filter="url(#shadow)">
+    <rect x="216" y="118" width="560" height="78" rx="14" fill="#fffaf0" stroke="#d8cdbd"/>
+    <rect x="216" y="212" width="560" height="78" rx="14" fill="#eff4ef" stroke="#d8cdbd"/>
+    <rect x="216" y="306" width="560" height="78" rx="14" fill="#f8e9e4" stroke="#d6a29a"/>
+    <rect x="216" y="400" width="560" height="78" rx="14" fill="#f6edd5" stroke="#d9c28b"/>
+  </g>
+  <circle cx="260" cy="157" r="22" stroke="#2f7f82" stroke-width="3"/>
+  <rect x="245" y="238" width="30" height="24" rx="4" stroke="#2f7f82" stroke-width="3"/>
+  <path d="M246 346h28M260 332v28" stroke="#a94d43" stroke-width="3" stroke-linecap="round"/>
+  <path d="M246 438h28M260 424v28" stroke="#b89452" stroke-width="3" stroke-linecap="round"/>
+  <text x="312" y="151" fill="#22211e" font-family="Georgia, serif" font-size="28">Firm profile slip</text>
+  <text x="312" y="245" fill="#22211e" font-family="Georgia, serif" font-size="28">Workflow and tool bricks</text>
+  <text x="312" y="339" fill="#22211e" font-family="Georgia, serif" font-size="28">Gap slips</text>
+  <text x="312" y="433" fill="#22211e" font-family="Georgia, serif" font-size="28">Evidence attached</text>
+  <text x="312" y="176" fill="#777168" font-family="Arial, sans-serif" font-size="15">Profile assumptions and operating context</text>
+  <text x="312" y="270" fill="#777168" font-family="Arial, sans-serif" font-size="15">Selected workflows and current tools</text>
+  <text x="312" y="364" fill="#777168" font-family="Arial, sans-serif" font-size="15">Coverage gaps that change the sequence</text>
+  <text x="312" y="458" fill="#777168" font-family="Arial, sans-serif" font-size="15">Methodology, vendor docs and implementation order</text>
+  <defs>
+    <filter id="shadow" x="190" y="98" width="612" height="410" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#22211e" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+</svg>

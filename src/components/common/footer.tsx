@@ -6,7 +6,7 @@ export function Footer() {
       <div className="site-container footer-grid">
         <div>
           <h2 className="display">InvestorStack</h2>
-          <p className="footer-note">The operating stack directory for investment firms.</p>
+          <p className="footer-note">The operating-stack atlas for investment firms.</p>
         </div>
         <div>
           <h3>Explore</h3>

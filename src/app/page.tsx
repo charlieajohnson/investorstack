@@ -8,9 +8,9 @@ import { LeadCaptureForm } from "@/components/lead/lead-capture-form";
 import { getRepository } from "@/lib/repository";
 
 const startingModes = [
-  { title: "Browse tools", description: "Find vendors by investment workflow category.", href: "/categories" },
-  { title: "Audit current stack", description: "Map what you use and identify operating gaps.", href: "/stack-builder" },
-  { title: "Compare vendors", description: "Evaluate two to four tools against investor-specific signals.", href: "/compare" },
+  { title: "Map current stack", description: "Start with the firm, incumbents and operating jobs.", href: "/stack-builder" },
+  { title: "Open category atlas", description: "Browse tools by investment workflow category.", href: "/categories" },
+  { title: "Compare fit", description: "Evaluate two to four tools against investor-specific signals.", href: "/compare" },
   { title: "Read methodology", description: "See how evidence, confidence and provisional scores work.", href: "/methodology" },
 ] as const;
 
@@ -32,7 +32,7 @@ export default async function HomePage() {
               <Link className="button" href="/stack-builder">Audit your stack</Link>
               <Link className="button button-secondary" href="/categories">Browse categories</Link>
             </div>
-            <p className="trust-line">Map → Score → Recommend → Evidence → Action</p>
+            <p className="trust-line">Map / Score / Recommend / Evidence / Action</p>
           </div>
           <div className="hero-scene">
             <StackAuditVignette />
@@ -42,8 +42,8 @@ export default async function HomePage() {
 
       <section className="site-container mode-section" aria-labelledby="mode-title">
         <div className="mode-heading">
-          <span className="eyebrow">Start with the job</span>
-          <h2 id="mode-title" className="display section-title">What are you trying to do?</h2>
+          <span className="eyebrow">Start with the work</span>
+          <h2 id="mode-title" className="display section-title">Choose the first ledger.</h2>
         </div>
         <div className="mode-grid">
           {startingModes.map((mode) => (
@@ -73,10 +73,10 @@ export default async function HomePage() {
         </div>
         <div className="feature-panel">
           <div className="feature-panel-copy">
-            <span className="meta">Stack audit cockpit</span>
-            <h3 className="display">From tool sprawl to operating clarity.</h3>
+            <span className="meta">Guided stack audit</span>
+            <h3 className="display">A guided audit, not a procurement spreadsheet.</h3>
             <p>Start with the systems already in place. The audit keeps useful incumbents visible, flags missing capabilities, and explains each recommendation with evidence and confidence.</p>
-            <Link className="button" href="/stack-builder">Start stack audit</Link>
+            <Link className="button" href="/stack-builder">Build your stack</Link>
           </div>
           <StackAuditVignette />
         </div>

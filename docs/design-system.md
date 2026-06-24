@@ -2,21 +2,25 @@
 
 ## Source concepts
 
-- `docs/concepts/home-concept.png`: home-page composition and editorial rhythm.
-- `docs/concepts/stack-builder-concept.png`: app-density, form and audit-table treatment.
-- `public/images/orchard-hero.jpg`: production hero asset generated for the project.
+- `docs/concepts/humanist-compute-atelier-stack-builder-concept.png`: primary Stack Builder layout, sequence and preview model.
+- `public/graphics/stack-builder-bricks.svg`: reusable stack-brick atlas motif.
+- `public/images/orchard-hero.jpg`: archived pastoral image retained only where it still supports the operating-stack metaphor.
 
-The written source of truth remains the InvestorStack design spec in the workspace. Generated concepts define composition and density, not factual copy or seed data.
+The written source of truth is the Humanist Compute Atelier overhaul spec supplied with the rebuild. Generated concepts define composition and density, not factual copy or seed data.
 
 ## Locked system
 
-- Canvas: warm bone `#F3EAD9`; paper `#FBF5E9`; warm ink `#241F1A`.
-- Accent: deep olive `#3A6A54`; category-leader ochre `#C2872E`.
-- Typography: Fraunces display, Geist Sans UI, Geist Mono numerals.
-- Structure: 1200px content, 1320px tables, hairline rules, 4px controls, 8px panels.
-- Imagery: one orchard band on home and a muted derivative on methodology only.
-- Containers: open bands and tables first; bordered cards only for directory cells and form groups.
-- Motion: 180ms state transitions; disabled under reduced motion.
+- Canvas: archival paper `#f6f2e8`, warm paper `#efe7d8`, cool paper `#eff4ef`.
+- Surfaces: manuscript panels `#fffaf0` with hairline borders and paper shadow.
+- Ink: `#22211e`, soft ink `#4a4741`, muted marginalia `#777168`.
+- Accent: verdigris `#7fa7a4`, teal ground `#2f7f82`, aged gold `#b89452`, oxide red only for gaps.
+- Typography: Fraunces display, Geist Sans UI, Geist Mono labels and numerals.
+- Structure: sparse paper nav, atlas sections, ledger tables, stack slips and catalogue cards.
+- Motion: small CSS placement/reveal motion only, disabled under reduced motion.
+
+## Canonical mode
+
+Humanist Compute Atelier is the only exposed visual system. The light/dark toggle, local-storage theme persistence and `.dark` token path are archived under `docs/archive/dark-investorstack-aesthetic/`.
 
 ## Above-the-fold copy allow-list
 
@@ -28,11 +32,11 @@ The written source of truth remains the InvestorStack design spec in the workspa
 - Methodology
 - THE INVESTMENT OPERATING STACK
 - Find the right operating stack for your investment firm.
-- Compare tools for sourcing, CRM, meeting memory, portfolio monitoring, contact enrichment, reporting and AI-enabled workflows.
-- Build your stack
+- Map your current tools, compare vendors, and identify the systems that improve sourcing, diligence, portfolio monitoring, reporting, and AI-enabled workflows.
+- Audit your stack
 - Browse categories
-- Scored by workflow fit, human usability, AI readiness, integration depth and expected time-to-value.
+- Map / Score / Recommend / Evidence / Action
 
 ## Icon treatment
 
-Lucide outline icons at 16 to 18px, 1.5px stroke, current colour. Tool identity uses fetched first-party-domain favicons where available with a deterministic monogram fallback.
+Use simple stack, cabinet and ledger marks. Tool identity uses fetched first-party-domain favicons where available with a deterministic monogram fallback.

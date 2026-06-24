@@ -13,14 +13,19 @@ export const metadata: Metadata = {
   title: { default: "InvestorStack", template: "%s | InvestorStack" },
   description: "Compare and build the operating stack for a modern investment firm, with explicit AI-readiness signals and evidence-led recommendations.",
   openGraph: { title: "InvestorStack", description: "The operating stack directory for investment firms.", type: "website" },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
 };
-
-const themeScript = `(function(){try{var t=localStorage.getItem('investorstack-theme');var d=t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.classList.toggle('dark',d)}catch(e){}})()`;
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${geist.variable} ${geistMono.variable} ${fraunces.variable}`} suppressHydrationWarning>
-      <head><script dangerouslySetInnerHTML={{ __html: themeScript }} /></head>
+    <html lang="en" className={`${geist.variable} ${geistMono.variable} ${fraunces.variable}`}>
       <body>
         <a className="skip-link" href="#main-content">Skip to content</a>
         <TopNav />

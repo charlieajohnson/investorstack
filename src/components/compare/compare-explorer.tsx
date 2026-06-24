@@ -42,7 +42,7 @@ export function CompareExplorer({ tools, initialSlugs }: { tools: Tool[]; initia
         <span className="eyebrow">Recommendation</span>
         <p className="lede" style={{ margin: "10px 0 0", maxWidth: 900 }}>{recommendation}</p>
       </div>
-      <div className="table-wrap">
+      <div className="table-wrap comparison-table-wrap">
         <table className="data-table" style={{ minWidth: Math.max(760, selectedTools.length * 250) }}>
           <thead><tr><th scope="col">Field</th>{selectedTools.map((tool) => <th key={tool.slug} scope="col"><span>{tool.name}</span>{selected.length > 2 ? <button type="button" onClick={() => remove(tool.slug)} aria-label={`Remove ${tool.name}`} style={{ marginLeft: 10, color: "var(--color-negative)" }}>×</button> : null}</th>)}</tr></thead>
           <tbody>
@@ -58,6 +58,21 @@ export function CompareExplorer({ tools, initialSlugs }: { tools: Tool[]; initia
             <tr><th scope="row">Evidence</th>{selectedTools.map((tool) => <td key={tool.slug}><Link className="text-link" href={`/tools/${tool.slug}`}>Open scorecard →</Link></td>)}</tr>
           </tbody>
         </table>
+      </div>
+      <div className="comparison-mobile-list">
+        {selectedTools.map((tool) => (
+          <article className="surface comparison-mobile-card" key={tool.slug}>
+            <div className="rule-title"><h2>{tool.name}</h2>{selected.length > 2 ? <button type="button" onClick={() => remove(tool.slug)} aria-label={`Remove ${tool.name}`}>Remove</button> : null}</div>
+            <dl>
+              <div><dt>Overall</dt><dd>{tool.scores ? calculateOverallScore(tool.scores) : "Not yet scored"}</dd></div>
+              <div><dt>Best for</dt><dd>{tool.best_for[0]}</dd></div>
+              <div><dt>Time-to-value</dt><dd>{formatLabel(tool.time_to_value)}</dd></div>
+              <div><dt>Implementation</dt><dd>{formatLabel(tool.implementation_burden)}</dd></div>
+              <div><dt>AI readiness</dt><dd>{tool.ai_readiness_signal.mcp === "hosted" ? "Hosted MCP" : formatLabel(tool.ai_readiness_signal.public_api)}</dd></div>
+            </dl>
+            <Link className="text-link" href={`/tools/${tool.slug}`}>Open scorecard</Link>
+          </article>
+        ))}
       </div>
     </div>
   );

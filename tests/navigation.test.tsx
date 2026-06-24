@@ -1,7 +1,6 @@
-import { fireEvent, render, screen, within } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import { TopNav } from "@/components/nav/top-nav";
-import { ThemeToggle } from "@/components/nav/theme-toggle";
 
 describe("site navigation", () => {
   it("exposes the five primary product routes", () => {
@@ -12,13 +11,12 @@ describe("site navigation", () => {
     }
   });
 
-  it("toggles and persists the dark theme", () => {
+  it("does not expose the archived light or dark theme toggle", () => {
     localStorage.clear();
     document.documentElement.classList.remove("dark");
-    render(<ThemeToggle />);
-    fireEvent.click(screen.getByRole("button", { name: "Use dark theme" }));
-    expect(document.documentElement).toHaveClass("dark");
-    expect(localStorage.getItem("investorstack-theme")).toBe("dark");
-    expect(screen.getByRole("button", { name: "Use light theme" })).toBeInTheDocument();
+    render(<TopNav />);
+    expect(screen.queryByRole("button", { name: /theme/i })).not.toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: /dark/i })).not.toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: /light/i })).not.toBeInTheDocument();
   });
 });
