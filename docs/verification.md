@@ -2,7 +2,7 @@
 
 ## 2026-06-24 Humanist Compute Atelier rebuild
 
-Status: local verification passed against the production build.
+Status: local and live production verification passed.
 
 ### Passed
 
@@ -12,6 +12,9 @@ Status: local verification passed against the production build.
 - Targeted whitespace and conflict-marker scans passed for changed source, tests, docs and SVG assets.
 - Production browser QA passed against `next start` on `127.0.0.1:3012`: no console/page errors and no horizontal overflow at 1440 by 1100 or 390 by 844.
 - Browser flow verified firm name or URL input, local concept-only preview update, current-tool bricks, gap slips, recommendation sequence, evidence slips, Stack health output and mobile Compare cards.
+- Pushed commit `d339276` to `origin/main`; production alias `https://investorstack.vercel.app` served the new Stack Builder copy.
+- Live route checks returned 200 for `/`, `/stack-builder`, `/compare`, `/methodology`, `/categories/meeting-memory` and `/sitemap.xml`.
+- Live browser smoke passed for Stack Builder desktop and Compare mobile with no console/page errors and no horizontal overflow.
 
 ### Evidence retained
 
